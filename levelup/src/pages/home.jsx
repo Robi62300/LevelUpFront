@@ -84,7 +84,7 @@ function Home(){
                      <p>Je suis un particulier</p>
                 </div>
                 <div className="hover-entreprise border15" onMouseEnter={handleMouseEnterHomeEntreprise} onMouseLeave={handleMouseLeaveHomeEntreprise}>
-                    {isDropDownVisibleHomeEntreprise && <HoverParticulier />}
+                    {isDropDownVisibleHomeEntreprise && <HoverEntreprise />}
                     <p>Je suis une entreprise</p>
                 </div>
             </section>
