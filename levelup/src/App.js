@@ -19,7 +19,6 @@ import Formations from './pages/formations';
 import Particulier from './pages/particulier';
 import Rejoindre from './pages/rejoindre';
 import './css/app.css';
-import { Children } from 'react';
 import Protected from './components/protected';
 
 function App() {
