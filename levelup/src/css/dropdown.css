@@ -1,0 +1,99 @@
+.menu-drop-rejoindre {
+    position: absolute;
+    display: flex;
+    top: 5.2rem;
+    right: 0rem;
+    width: 300px;
+    height: 100%;
+    padding: 1px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.menu-drop-entreprise {
+    position: absolute;
+    display: flex;
+    top: 5.2rem;
+    right: 41.5rem;
+    width: 300px;
+    height: 100%;
+    padding: 1px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.menu-drop-particulier {
+    position: absolute;
+    display: flex;
+    top: 5.2rem;
+    right: 24.5rem;
+    width: 300px;
+    height: 100%;
+    padding: 1px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.toto{
+    display: flex;
+}
+.toto:hover .rectangle{
+    display: flex;
+    background: linear-gradient(279deg, rgba(227, 167, 255, 0.70) 0%, rgba(125, 255, 255, 0.80) 100%);
+
+}
+.dropdown{
+    display: flex;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: rgb(255, 255, 255);
+}
+
+.lidropdown{
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 24px;
+    padding-left: 5px;
+    justify-content:flex-start;
+    gap: 10px;
+    border-style: solid;
+    width: 100%;
+    border-color: #d0cece;
+    border-width: 0 0px 2px 0px;
+    transition: all 0.333s ease;
+}
+
+.lidropdown:hover {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 24px;
+    padding-left: 10px; 
+    justify-content:flex-start;
+    gap: 10px;
+    border-style: solid;
+    width: 100%;
+    border-color: #d0cece;
+    border-width: 0 0px 2px 0px;
+}
+
+.rectangle{
+    display: block;
+    background: rgb(255, 255, 255);
+    height: 96.4%;
+    width: 3px;
+    align-self: stretch;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0px;
+    border-style: solid;
+    border-color: #d0cece;
+    border-width: 0 0px 2px 0px;
+}
+
+
+
+
+
+

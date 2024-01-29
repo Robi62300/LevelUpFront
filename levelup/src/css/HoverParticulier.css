@@ -1,0 +1,10 @@
+.hover-particulier:hover {
+    transition: all 0.333s ease;
+    background-image: none;
+    background: linear-gradient(279deg, rgba(227, 167, 255, 0.70) 0%, rgba(125, 255, 255, 0.80) 100%);
+    color: black;
+}
+
+.hover-particulier:hover p{
+    display: none;
+}
