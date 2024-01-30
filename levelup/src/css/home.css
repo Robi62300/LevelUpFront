@@ -63,7 +63,7 @@
 }
 .choose {
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     display: flex;
     margin-top: 3vh;
     gap: 10vh;
@@ -166,6 +166,8 @@
 .margin-bot{
     margin-bottom: 2vh;
 }
+
+
 
 .block-icon{
     margin-top: 3vh;

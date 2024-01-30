@@ -7,6 +7,25 @@ import HoverEntreprise from "../components/HoverEntreprise";
 import HoverParticulier from "../components/HoverParticulier";
 import Image3 from "../img/image3.jpg";
 
+function Section({ children }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    return (
+      <section ref={ref}>
+        <span
+          style={{
+            transform: isInView ? "none" : "translateY(200px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.333s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+        >
+          {children}
+        </span>
+      </section>
+    );
+  }
+
 function Home(){
 // Variable 1
     const count = useMotionValue(0);
@@ -61,29 +80,9 @@ function Home(){
   const handleMouseLeaveHomeParticulier = () => {
       setDropdownVisibleHomeParticulier(false);
   };
-
-  function Section({ children }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
   
-    return (
-      <section ref={ref}>
-        <span
-          style={{
-            transform: isInView ? "none" : "translateY(100px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.777s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-        >
-          {children}
-        </span>
-      </section>
-    );
-  }
-
     return(
         <main className="home">
-            
             <div className="testimage">
                 <img src={Image3} alt="Truc" className="image3" />
             </div>
@@ -109,7 +108,7 @@ function Home(){
                     <p>Je suis une entreprise</p>
                 </div>
             </section>
-            <Section>
+            <Section className="animation-test3">
             <section className="satinne chiffre">
                 <div className="test5">
                     <Cercle />
