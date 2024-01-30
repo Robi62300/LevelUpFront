@@ -1,10 +1,11 @@
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { MdCastForEducation, MdPsychology, MdSchool, MdSentimentVerySatisfied  } from "react-icons/md";
 import { PiMagnifyingGlass } from "react-icons/pi";
 import  Cercle  from "../components/cercle";
 import HoverEntreprise from "../components/HoverEntreprise";
 import HoverParticulier from "../components/HoverParticulier";
+import Image3 from "../img/image3.jpg";
 
 function Home(){
 // Variable 1
@@ -61,11 +62,31 @@ function Home(){
       setDropdownVisibleHomeParticulier(false);
   };
 
+  function Section({ children }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+  
+    return (
+      <section ref={ref}>
+        <span
+          style={{
+            transform: isInView ? "none" : "translateY(100px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.777s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+          }}
+        >
+          {children}
+        </span>
+      </section>
+    );
+  }
 
     return(
         <main className="home">
             
-            <div className="image1"></div>
+            <div className="testimage">
+                <img src={Image3} alt="Truc" className="image3" />
+            </div>
             <div className="levelup">
                 <h1 className="h1level ">
                     LEVEL'UP! FORMATION
@@ -88,6 +109,7 @@ function Home(){
                     <p>Je suis une entreprise</p>
                 </div>
             </section>
+            <Section>
             <section className="satinne chiffre">
                 <div className="test5">
                     <Cercle />
@@ -142,6 +164,8 @@ function Home(){
                     </div>
                 </div>
             </section>
+            </Section>
+            
             <section className="FinDePage">
                 <h2 className="margin-top margin-bot">
                     Des clients heureux !
@@ -163,6 +187,7 @@ function Home(){
                     <p className="margin-top text">Level'up certifié depuis le 21 Août 2023</p>
                 </div>
             </section>
+            
         </main>  
     );
 }
