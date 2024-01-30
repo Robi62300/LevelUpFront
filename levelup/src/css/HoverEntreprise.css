@@ -4,5 +4,30 @@
     background-image: none;
     background: linear-gradient(279deg, rgba(227, 167, 255, 0.70) 0%, rgba(125, 255, 255, 0.80) 100%);
     color: black;
+    justify-content: center;
+    align-items: flex-start;
+}
 
+.hover-entreprise:hover .h3-hover{
+    margin-bottom: 15%;
+    margin-top: 5%;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.hover-entreprise:hover .li-hover{
+    display: flex;
+    margin-top: 30px;
+    font-size: 17px;
+    justify-content: flex-start;
+
+}
+
+.hover-entreprise:hover p{
+    display: none;
+}
+
+.hover-entreprise:hover .icon-hover{
+    color: #F1BB7C;
+    margin-right: 5px;
 }
