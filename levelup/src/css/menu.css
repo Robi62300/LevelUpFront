@@ -1,5 +1,4 @@
 .menu {
-    position: sticky;
     z-index: 3;
     top: 0;
     display: flex;

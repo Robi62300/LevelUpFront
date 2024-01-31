@@ -7,6 +7,9 @@ import HoverEntreprise from "../components/HoverEntreprise";
 import HoverParticulier from "../components/HoverParticulier";
 import Image3 from "../img/image3.jpg";
 
+
+// Function pour l'animation de " view "
+
 function Section({ children }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -26,8 +29,11 @@ function Section({ children }) {
     );
   }
 
+
+
 function Home(){
-// Variable 1
+
+// Animation Compteur pour l'année d'expérience
     const count = useMotionValue(0);
     const rounded = useTransform(count, Math.round);
 
@@ -36,7 +42,7 @@ function Home(){
     return animation.stop;
   }, );
 
-// Variable 2
+// Animation pour le nombre de personnes formées 
     const count2 = useMotionValue(0);
     const rounded2 = useTransform(count2, Math.round);
 
@@ -45,7 +51,7 @@ function Home(){
     return animation2.stop;
   }, );
 
-// Variable 3
+// Animation pour le nombre de consultants
     const count3 = useMotionValue(0);
     const rounded3 = useTransform(count3, Math.round);
 
@@ -54,7 +60,7 @@ function Home(){
     return animation3.stop;
   }, );
 
-// Variable 4
+// Animation pour le % de clients satisfaits
     const count4 = useMotionValue(0);
     const rounded4 = useTransform(count4, Math.round);
 
@@ -98,79 +104,91 @@ function Home(){
                     <PiMagnifyingGlass className="icon-loupe" />
                 </div>
             </div>
+            <Section>
             <section className="choose">
                 <div className="hover-particulier border15" onMouseEnter={handleMouseEnterHomeParticulier} onMouseLeave={handleMouseLeaveHomeParticulier}>
                     {isDropDownVisibleHomeParticulier && <HoverParticulier />}
                      <p>Je suis un particulier</p>
                 </div>
+                
                 <div className="hover-entreprise border15" onMouseEnter={handleMouseEnterHomeEntreprise} onMouseLeave={handleMouseLeaveHomeEntreprise}>
                     {isDropDownVisibleHomeEntreprise && <HoverEntreprise />}
                     <p>Je suis une entreprise</p>
                 </div>
+                
             </section>
+            </Section>
             <Section className="animation-test3">
-            <section className="satinne chiffre">
-                <div className="test5">
-                    <Cercle />
-                </div>
-                <div className="margin-top">
-                    <h2>
-                        Level'up bilan de compétence en chiffres
-                    </h2>
-                </div>
-                <div className="block-icon">
-                    <div className="menu-icon">
-                        {/* <div className="experience">
-                            <IconExperiences 
-                                fillColor="#F1BB7C"
-                            />
-                        </div> */}
-                        <MdPsychology className="titi"/>
-                        <motion.div>{rounded}</motion.div>
-                        <p>ans d'expérience</p>
+                <section className="satinne chiffre">
+                    <div className="test5">
+                        <Cercle />
                     </div>
-                    <div className="menu-icon">
-                         {/* <div className="formees">
-                            <IconFormees 
-                                fillColor="#F1BB7C"
-                            /> 
-                        </div> */}
-                        <MdSchool className="titi"  />
-                        <motion.div>{rounded2}</motion.div>
-                        <p>
-                            personnes formées en 2022
-                        </p>
+                    <div className="margin-top">
+                        <h2>
+                            Level'up bilan de compétence en chiffres
+                        </h2>
                     </div>
-                    <div className="menu-icon">
-                        {/* <div className="consultant">
-                            <IconConsultants 
-                                fillColor="#F1BB7C"
-                            />
-                        </div> */}
-                        <MdCastForEducation className="titi" />
-                        <motion.div>{rounded3}</motion.div>
+                    <div className="block-icon">
+                        <div className="menu-icon">
+                            {/* <div className="experience">
+                                <IconExperiences 
+                                    fillColor="#F1BB7C"
+                                />
+                            </div> */}
+                            <MdPsychology className="titi"/>
+                            <motion.div>{rounded}</motion.div>
+                            <p>ans d'expérience</p>
+                        </div>
+                        <div className="menu-icon">
+                            {/* <div className="formees">
+                                <IconFormees 
+                                    fillColor="#F1BB7C"
+                                /> 
+                            </div> */}
+                            <MdSchool className="titi"  />
+                            <motion.div>{rounded2}</motion.div>
+                            <p>
+                                personnes formées en 2022
+                            </p>
+                        </div>
+                        <div className="menu-icon">
+                            {/* <div className="consultant">
+                                <IconConsultants 
+                                 fillColor="#F1BB7C"
+                                />
+                            </div> */}
+                            <MdCastForEducation className="titi" />
+                            <motion.div>{rounded3}</motion.div>
                         <p>
                             consultants
                         </p>
+                        </div>
+                        <div className="menu-icon">
+                            {/* <div className="icon satisfaits"></div> */}
+                            <MdSentimentVerySatisfied className="titi" />
+                            <motion.div>
+                                {rounded4}
+                            </motion.div>
+                            <p>
+                                % de clients satisfaits
+                            </p>
+                        </div>
                     </div>
-                    <div className="menu-icon">
-                        {/* <div className="icon satisfaits"></div> */}
-                        <MdSentimentVerySatisfied className="titi" />
-                        <motion.div>{rounded4}</motion.div>
-                        <p>
-                            % de clients satisfaits
-                        </p>
-                    </div>
-                </div>
-            </section>
+                </section>
             </Section>
             
             <section className="FinDePage">
-                <h2 className="margin-top margin-bot">
-                    Des clients heureux !
-                </h2>
-                <div className="photo2">
-                </div>
+                
+                    <h2 className="margin-top margin-bot">
+                        <Section>
+                            Des clients heureux !
+                        </Section>
+                    </h2>
+                <Section>
+                    <div className="cssphoto2">
+                        <div className="photo2"></div>
+                    </div>
+                </Section>
                 <p className="margin-top">"Satinne c'est la meilleure"</p>
                 <p className="margin-top">Robi</p>
                 <div className="test6">

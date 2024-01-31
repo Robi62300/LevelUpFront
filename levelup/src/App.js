@@ -20,12 +20,15 @@ import Particulier from './pages/particulier';
 import Rejoindre from './pages/rejoindre';
 import './css/app.css';
 import Protected from './components/protected';
+import Headroom from 'react-headroom';
 
 function App() {
   return (
     <>
     <Protected>
+    <Headroom>
     <Menu />
+    </Headroom>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/contacter" element={<Contacter />} />

@@ -104,9 +104,9 @@ export default function Footer() {
                     </h3>
                     <div className="col-entreprise">   
                         <ul>
-                            <li className="li-footer">TOTO - 18 rue TATA</li>
-                            <li className="li-footer">62548 Quelque part</li>
-                            <li className="li-footer">unmal@pas-d'inspi.fr</li>
+                            <li className="li-footer">Centre Level'up - 54 rue de Sèvres</li>
+                            <li className="li-footer">75007 Paris</li>
+                            <li className="li-footer">centre.levelup@gmail.com</li>
                             <li className="li-footer">66 33 55 22 11</li>
                         </ul>
                     </div>
