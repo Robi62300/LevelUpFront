@@ -1,11 +1,15 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { MdCastForEducation, MdPsychology, MdSchool, MdSentimentVerySatisfied  } from "react-icons/md";
-import { PiMagnifyingGlass } from "react-icons/pi";
-import  Cercle  from "../components/cercle";
+import  CercleGauche  from "../components/cercleGauche";
 import HoverEntreprise from "../components/HoverEntreprise";
 import HoverParticulier from "../components/HoverParticulier";
 import Image3 from "../img/image3.jpg";
+import ImageCertif from "../img/certificat.jpg";
+import BarreDeRecherche from "../components/BarreDeRecherche";
+import ImageClient from "../img/photo2.jpg";
+import CercleDroite from "../components/cercleDroite";
+
 
 
 // Function pour l'animation de " view "
@@ -28,7 +32,6 @@ function Section({ children }) {
       </section>
     );
   }
-
 
 
 function Home(){
@@ -87,6 +90,28 @@ function Home(){
       setDropdownVisibleHomeParticulier(false);
   };
   
+  //Le onclick pour la recherche
+
+useEffect(() => {
+    const container = document.querySelector(".search-bar");
+    const searchIcons = document.querySelectorAll(".search-bar i");
+   
+    const handleClick = () => {
+      container.classList.toggle("change");
+    };
+   
+    searchIcons.forEach(searchIcon => {
+      searchIcon.addEventListener("click", handleClick);
+    });
+   
+    return () => {
+      searchIcons.forEach(searchIcon => {
+        searchIcon.removeEventListener("click", handleClick);
+      });
+    };
+  },);
+
+
     return(
         <main className="home">
             <div className="testimage">
@@ -98,30 +123,32 @@ function Home(){
                 </h1>
                 <p className="margin-top p1">Développez vos compétences avec nos formations ludiques et sur-mesure !</p>
                 <div className="truc">
-                    <p>
+                    <div className="search-bar">
+                        <BarreDeRecherche/>
+                    </div>
+                    <p className="text-recherche">
                         Je recherche une formation     
                     </p>
-                    <PiMagnifyingGlass className="icon-loupe" />
                 </div>
             </div>
             <Section>
             <section className="choose">
                 <div className="hover-particulier border15" onMouseEnter={handleMouseEnterHomeParticulier} onMouseLeave={handleMouseLeaveHomeParticulier}>
                     {isDropDownVisibleHomeParticulier && <HoverParticulier />}
-                     <p>Je suis un particulier</p>
+                     <p className="Choix">Je suis un particulier</p>
                 </div>
                 
                 <div className="hover-entreprise border15" onMouseEnter={handleMouseEnterHomeEntreprise} onMouseLeave={handleMouseLeaveHomeEntreprise}>
                     {isDropDownVisibleHomeEntreprise && <HoverEntreprise />}
-                    <p>Je suis une entreprise</p>
+                    <p className="Choix">Je suis une entreprise</p>
                 </div>
                 
             </section>
             </Section>
             <Section className="animation-test3">
                 <section className="satinne chiffre">
-                    <div className="test5">
-                        <Cercle />
+                    <div className="cercle-gauche">
+                        <CercleGauche />
                     </div>
                     <div className="margin-top">
                         <h2>
@@ -130,21 +157,11 @@ function Home(){
                     </div>
                     <div className="block-icon">
                         <div className="menu-icon">
-                            {/* <div className="experience">
-                                <IconExperiences 
-                                    fillColor="#F1BB7C"
-                                />
-                            </div> */}
                             <MdPsychology className="titi"/>
                             <motion.div>{rounded}</motion.div>
                             <p>ans d'expérience</p>
                         </div>
                         <div className="menu-icon">
-                            {/* <div className="formees">
-                                <IconFormees 
-                                    fillColor="#F1BB7C"
-                                /> 
-                            </div> */}
                             <MdSchool className="titi"  />
                             <motion.div>{rounded2}</motion.div>
                             <p>
@@ -152,11 +169,6 @@ function Home(){
                             </p>
                         </div>
                         <div className="menu-icon">
-                            {/* <div className="consultant">
-                                <IconConsultants 
-                                 fillColor="#F1BB7C"
-                                />
-                            </div> */}
                             <MdCastForEducation className="titi" />
                             <motion.div>{rounded3}</motion.div>
                         <p>
@@ -164,7 +176,6 @@ function Home(){
                         </p>
                         </div>
                         <div className="menu-icon">
-                            {/* <div className="icon satisfaits"></div> */}
                             <MdSentimentVerySatisfied className="titi" />
                             <motion.div>
                                 {rounded4}
@@ -184,15 +195,18 @@ function Home(){
                             Des clients heureux !
                         </Section>
                     </h2>
-                <Section>
-                    <div className="cssphoto2">
-                        <div className="photo2"></div>
-                    </div>
-                </Section>
+                <Section> 
+                        <div className="test8">
+                            <img src={ImageClient} className="image2" alt="" />
+                            <div className="cercle-droit">
+                                <CercleDroite />
+                            </div>
+                        </div>
+                </Section> 
                 <p className="margin-top">"Satinne c'est la meilleure"</p>
                 <p className="margin-top">Robi</p>
-                <div className="test6">
-                    <Cercle />
+                <div className="cercle-gauche-deux">
+                    <CercleGauche />
                 </div>
                 <h2 className="margin-top">
                     Qui est Level'up ?
@@ -203,6 +217,7 @@ function Home(){
                     <h2>Notre gage de qualité ?</h2>
                     <p className="margin-top text">Level'up certifié depuis le 21 Août 2023</p>
                 </div>
+                <img src={ImageCertif} alt="" className="ImageCertif" />
             </section>
             
         </main>  

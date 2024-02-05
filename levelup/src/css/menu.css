@@ -1,4 +1,5 @@
 .menu {
+    position: relative;
     z-index: 3;
     top: 0;
     display: flex;

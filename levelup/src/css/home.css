@@ -18,21 +18,39 @@
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.Choix {
+    color: #F1BB7C;
+    font-size: 41px;
+    border-color: black;
+}
 .truc {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding-top: 2vh;
+    padding-bottom: 1vh;
+}
+
+.container-image {
+    display: flex;
+    width: 90%;
+    height: 100vh;
+}
+.showdiv {
+    background-color: #F1BB7C;
+    width: 25vh;
+    height: 4vh;
+    border-radius: 18px;
 }
 
 .icon-loupe {
+    display: flex;
     height: 20px;
     width: 20px;
-    margin-left: 10px;
-    background-color: white;
-    border-radius: 10px;
 }
+
+
 .levelup {
     display: flex;
     justify-content: flex-start;
@@ -41,7 +59,6 @@
     text-align: center;
     background: linear-gradient(107deg, rgba(125, 255, 255, 0.80) 4.65%, rgba(227, 167, 255, 0.69) 100%);
     margin-top: 6vh;
-    height: 20vh;
     width: 90vw;
     border-radius: 18px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -148,7 +165,9 @@ section span .choose-animation {
 }
 
 .image2{
-    object-fit: cover;
+    height: 70vh;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .cssphoto2{
@@ -156,18 +175,28 @@ section span .choose-animation {
     justify-content: center;
 }
 
+.test8 {
+    display: flex;
+    justify-content: center;
+}
 
-.test5{
+.cercle-gauche{
     position: absolute;
     left: 0;
     z-index: 0;
 }
 
-.test6{
+.cercle-gauche-deux{
     position: absolute;
     top: 60%;
     left: 0;
-    z-index: 1;
+    z-index: 0;
+}
+
+.cercle-droit{
+    position: absolute;
+    right: 0;
+    z-index: 0;
 }
 
 .margin-top{
@@ -178,6 +207,9 @@ section span .choose-animation {
     margin-bottom: 2vh;
 }
 
+.ImageCertif{
+    height: 100vh;
+}
 
 
 .block-icon{
@@ -243,7 +275,9 @@ section span {
     flex-direction: column;
     justify-content: center;
 }
-
+.text-recherche{
+    padding-left: 1rem;
+}
 h2 {
     font-size: 32px;
 }
