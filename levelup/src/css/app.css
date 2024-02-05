@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 @import './reset.css';
 @import './home.css';
 @import './menu.css';
@@ -6,3 +8,9 @@
 @import './footer.css';
 @import './HoverEntreprise.css';
 @import './HoverParticulier.css';
+@import './BarreDeRecherche.css';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}

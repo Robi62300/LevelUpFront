@@ -20,6 +20,7 @@
     margin-top: 30px;
     font-size: 17px;
     justify-content: flex-start;
+    align-items: center;
 
 }
 
@@ -30,4 +31,5 @@
 .hover-entreprise:hover .icon-hover{
     color: #F1BB7C;
     margin-right: 5px;
+    font-size: 1.8rem;
 }

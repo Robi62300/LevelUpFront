@@ -1,10 +1,37 @@
+import React, {useEffect} from "react";
+import BarreDeRecherche from "../components/BarreDeRecherche";
+
+    
+
 export default function NousContacter() {
+ useEffect(() => {
+     const container = document.querySelector(".search-bar");
+     const searchIcons = document.querySelectorAll(".search-bar i");
+    
+     const handleClick = () => {
+       container.classList.toggle("change");
+     };
+    
+     searchIcons.forEach(searchIcon => {
+       searchIcon.addEventListener("click", handleClick);
+     });
+    
+     return () => {
+       searchIcons.forEach(searchIcon => {
+         searchIcon.removeEventListener("click", handleClick);
+       });
+     };
+   },);
+ 
     return (
-        <div className="titre">
-            <h1>Contactez-nous !</h1>
-            <p>Spécialiste de l'accompagnement des entreprises et des particuliers,
-                nous vous proposons des solutions sur-mesure et nous adaptons à vos besoins et à vos spéficités.
-            </p>
+        <>
+        <div className="container">
+            <div className="titre">
+            </div>
+            <div className="search-bar">
+                <BarreDeRecherche/>
+            </div>
         </div>
+    </>
     )
-}
+ }
