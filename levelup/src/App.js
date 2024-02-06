@@ -1,6 +1,6 @@
 
 import { Routes, Route } from 'react-router-dom';
-import Menu from './components/header';
+import Nav from './components/Nav';
 import Footer from './components/footer';
 import Home from './pages/home';
 import DejaConsultant from './pages/dejaconsultant';
@@ -19,15 +19,15 @@ import Formations from './pages/formations';
 import Particulier from './pages/particulier';
 import Rejoindre from './pages/rejoindre';
 import './css/app.css';
-import Protected from './components/protected';
+// import Protected from './components/protected';
 import Headroom from 'react-headroom';
 
 function App() {
   return (
     <>
-    <Protected>
+    {/* <Protected> */}
     <Headroom>
-    <Menu />
+    <Nav />
     </Headroom>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -49,7 +49,7 @@ function App() {
       <Route path="/rejoindre" element={<Rejoindre />} />
     </Routes>
     <Footer />
-    </Protected>
+    {/* </Protected> */}
     </>
     );
 }
