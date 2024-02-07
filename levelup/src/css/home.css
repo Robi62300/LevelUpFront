@@ -79,7 +79,7 @@
     max-width: 200px;
 }
 .choose {
-    width: 100%;
+    width: 100vw;
     height: 45vh;
     display: flex;
     margin-top: 6vh;
@@ -95,7 +95,8 @@ section span .choose-animation {
 .hover-particulier {
     display: flex;
     height: 40vh;
-    max-width: 40%;
+    width: 40%;
+    max-width: 100%;
     background-color: black;
     color: white;
     justify-content: center;
@@ -108,7 +109,8 @@ section span .choose-animation {
     display: flex;
     background-color: blueviolet;
     height: 40vh;
-    max-width: 40%;
+    width: 40%;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -132,6 +134,7 @@ section span .choose-animation {
 
 .image3{
     object-fit: cover;
+    width: 100%;
     height: 100%;
     max-width: 100%;
     border-radius: 18px;
@@ -207,10 +210,9 @@ section span .choose-animation {
     margin-bottom: 2vh;
 }
 
-.ImageCertif{
-    height: 100vh;
+.fermer{
+    display: none;
 }
-
 
 .block-icon{
     margin-top: 3vh;
@@ -287,5 +289,6 @@ p {
 }
 
 .ImageCertif {
+    background-size: cover;
     max-width: 100%;
 }

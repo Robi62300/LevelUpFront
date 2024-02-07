@@ -2,14 +2,15 @@
     .bas-de-page{
         display: flex;
         height: 20vh;
-        width: 100%;
-        margin-right: 20px;
         background-color: #152f3E;
         bottom: 0;
+        padding: 40px 40px;
     }
     .col{
         display: flex;
         justify-content: center;
+        padding-top: 15px;
+        align-items: flex-start;
     }
     .tata{
         display: flex;
@@ -48,9 +49,7 @@
     }
 
     .Qualiopi{
-        max-width: 100%;
-        height: 15px;
-        margin-top: 10px;
+        background-size: cover;
     }   
 
     .one {
