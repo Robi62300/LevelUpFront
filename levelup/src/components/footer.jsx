@@ -111,7 +111,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <img className="Qualiopi" src={Qualiopi} width="207" alt="logo"  >
+                <img className="Qualiopi" src={Qualiopi} alt="logo"  >
                 </img>
              </div>       
         </footer>

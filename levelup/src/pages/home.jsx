@@ -131,7 +131,7 @@ useEffect(() => {
                     </p>
                 </div>
             </div>
-            <Section>
+            <Section className="fermer">
             <section className="choose">
                 <div className="hover-particulier border15" onMouseEnter={handleMouseEnterHomeParticulier} onMouseLeave={handleMouseLeaveHomeParticulier}>
                     {isDropDownVisibleHomeParticulier && <HoverParticulier />}
@@ -145,11 +145,12 @@ useEffect(() => {
                 
             </section>
             </Section>
-            <Section className="animation-test3">
-                <section className="satinne chiffre">
-                    <div className="cercle-gauche">
+            <div className="cercle-gauche-deux">
                         <CercleGauche />
                     </div>
+            <Section className="fermer">
+                <section className="satinne chiffre">
+                    
                     <div className="margin-top">
                         <h2>
                             Level'up bilan de compétence en chiffres
@@ -195,7 +196,7 @@ useEffect(() => {
                             Des clients heureux !
                         </Section>
                     </h2>
-                <Section> 
+                <Section className="fermer"> 
                         <div className="test8">
                             <img src={ImageClient} className="image2" alt="" />
                             <div className="cercle-droit">

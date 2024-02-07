@@ -46,36 +46,36 @@ export default function Menu() {
             <img className="logo" src={logo} alt="logo"  >
                 </img>
          <ul className="header">
-            <li className="menuItem" >
+            <li className="menuItem slideInDown-1" >
                 <NavLink  to="/" className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     Accueil
                 </NavLink>
             </li>
-            <li className="menuItem">
+            <li className="menuItem slideInDown-2">
                 <NavLink to="/sommes" className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     Qui sommes-nous ?
                 </NavLink>
             </li>
-            <li className="menuItem" onMouseEnter={handleMouseEnterEntreprise} onMouseLeave={handleMouseLeaveEntreprise}>
+            <li className="menuItem slideInDown-3" onMouseEnter={handleMouseEnterEntreprise} onMouseLeave={handleMouseLeaveEntreprise}>
                 <NavLink to="/entreprise"  className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     {isDropDownVisibleEntreprise && <DropDownEntreprise />}
                     Je suis une entreprise
                 </NavLink>
                 <img className="fleche" src={FlechesBas} width="20px" alt="Flechesbas"></img>
             </li>
-            <li className="menuItem" onMouseEnter={handleMouseEnterParticulier} onMouseLeave={handleMouseLeaveParticulier}>
+            <li className="menuItem slideInDown-4" onMouseEnter={handleMouseEnterParticulier} onMouseLeave={handleMouseLeaveParticulier}>
                 <NavLink to="/particulier" className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     {isDropDownVisibleParticulier && <DropDownParticulier />}
                     Je suis un particulier
                 </NavLink>
                 <img className="fleche" src={FlechesBas} width="20px" alt="Flechesbas"></img>
             </li>
-            <li className="menuItem">
+            <li className="menuItem slideInDown-5">
                 <NavLink to="/contacter" className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     Nous-contacter
                 </NavLink>
             </li>
-            <li className="menuItem" onMouseEnter={handleMouseEnterRejoindre} onMouseLeave={handleMouseLeaveRejoindre}>
+            <li className="menuItem slideInDown-6" onMouseEnter={handleMouseEnterRejoindre} onMouseLeave={handleMouseLeaveRejoindre}>
                 <NavLink to="/rejoindre" className={`navbar-link ${ ({isActive}) => (isActive? " activeLink " : undefined)}`}>
                     {isDropDownVisibleRejoindre && <DropDownRejoindre />}
                     Nous rejoindre
