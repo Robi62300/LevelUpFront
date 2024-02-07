@@ -145,12 +145,12 @@ useEffect(() => {
                 
             </section>
             </Section>
-            <div className="cercle-gauche-deux">
-                        <CercleGauche />
-                    </div>
+            
             <Section className="fermer">
                 <section className="satinne chiffre">
-                    
+                    <div className="cercle-gauche-deux">
+                        <CercleGauche />
+                    </div>
                     <div className="margin-top">
                         <h2>
                             Level'up bilan de compétence en chiffres

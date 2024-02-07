@@ -79,7 +79,7 @@
     max-width: 200px;
 }
 .choose {
-    width: 100%;
+    width: 100vw;
     height: 45vh;
     display: flex;
     margin-top: 6vh;
@@ -243,14 +243,14 @@ section span .choose-animation {
     max-width: 300px;
 }
 
-/* section {
-
+section {
+    width: 100%;
 }
 section span {
     display: block;
     transform: translateY(-100px);
     opacity: 0;
-  } */
+  }
 
 .photo2{
     display: flex;
