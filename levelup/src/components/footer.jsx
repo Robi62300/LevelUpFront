@@ -61,6 +61,8 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+            
+            
                 <div className="tata">
                     <h3 className="titre-footer">
                         Réseaux sociaux
@@ -85,7 +87,9 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
+                    </div>
                 </div>
+            <div className="col2">
                 <div className="tata">
                     <h3 className="titre-footer">
                         Informations

@@ -16,3 +16,7 @@ body {
     overflow-x: hidden;
     width: 100svw;
 }
+
+html {
+    width: 100svw;
+}

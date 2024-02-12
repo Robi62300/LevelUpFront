@@ -1,16 +1,26 @@
 @media screen and (min-width:1024px) { 
     .bas-de-page{
         display: flex;
-        height: 20vh;
         background-color: #152f3E;
         bottom: 0;
         padding: 40px 40px;
+        flex-direction: column;
+        align-items: center;
     }
     .col{
         display: flex;
+        width: 100%;
         justify-content: center;
         padding-top: 15px;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .col2{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-top: 10vh;
     }
     .tata{
         display: flex;
@@ -61,3 +71,74 @@
     }
 
  } 
+
+ @media screen and (max-width:767px) { 
+    .bas-de-page{
+        display: flex;
+        background-color: #152f3E;
+        bottom: 0;
+        padding: 40px 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .col{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 15px;
+        justify-content: space-between;
+    }
+    .col2{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-top: 10vh;
+        justify-content: space-between;
+    }
+    .tata{
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+    }   
+
+    .titre-footer{
+        font-size: 20px;
+        color: #FFF;
+        display: flex;
+        margin-bottom: 13px;
+    }
+    .li-footer{
+        color: #A3A3A3;
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .li-social{
+        margin-top: 2px;
+        font-size: 16px;
+        color: #A3A3A3;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-footer {
+        height: 27px;
+        width: 27px;
+        color: #FFF;
+    }
+
+    .Qualiopi{
+        background-size: cover;
+    }   
+
+    .one {
+        color: #A3A3A3;
+    }
+
+    .bas-de-page a {
+        color: #A3A3A3;
+    }
+
+ }

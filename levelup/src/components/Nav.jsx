@@ -61,6 +61,7 @@ export default function Menu() {
                     {isDropDownVisibleEntreprise && <DropDownEntreprise />}
                     Je suis une entreprise
                 </NavLink>
+                
                 <img className="fleche" src={FlechesBas} width="20px" alt="Flechesbas"></img>
             </li>
             <li className="menuItem slideInDown-4" onMouseEnter={handleMouseEnterParticulier} onMouseLeave={handleMouseLeaveParticulier}>
