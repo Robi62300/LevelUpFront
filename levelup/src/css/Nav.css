@@ -58,9 +58,6 @@ a {
     padding: 0.5rem;
 }
 
-.navbar-link {
-    font-size: 14px;
-}
 
 @media screen and (max-width:767px) {
     .header {
@@ -72,7 +69,6 @@ a {
     }
 
     .fleche {
-        display: none;
     }
 
     a {
@@ -81,6 +77,10 @@ a {
 
     .menuItem {
         flex-direction: column;
+    }
+
+    .menuItem:hover {
+        background: none;
     }
 
     .header {

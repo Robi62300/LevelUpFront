@@ -2,7 +2,6 @@
     position: absolute;
     display: flex;
     top: 5.5rem;
-    /* right: 10rem; */
     width: 300px;
     height: 100%;
     padding: 1px 0px;
@@ -15,7 +14,6 @@
     position: absolute;
     display: flex;
     top: 5.5rem;
-    /* right: 53rem; */
     width: 300px;
     height: 100%;
     padding: 1px 0px;
@@ -95,4 +93,16 @@
     border-style: solid;
     border-color: #d0cece;
     border-width: 0 0px 2px 0px;
+}
+
+@media screen and (max-width:767px) {
+    .menu-drop-entreprise {
+        display: none;
+    }
+    .menu-drop-particulier{
+        display: none;
+    }
+    .menu-drop-rejoindre{
+        display: none;
+    }
 }

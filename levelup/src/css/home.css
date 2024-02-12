@@ -21,7 +21,6 @@
 
 .Choix {
     color: #F1BB7C;
-    font-size: 41px;
     border-color: black;
 }
 
@@ -90,7 +89,7 @@
     height: 45vh;
     display: flex;
     margin-top: 6vh;
-    gap: 10vh;
+    gap: 5vh;
     justify-content: center;
 }
 
@@ -163,8 +162,8 @@ section span .choose-animation {
     padding-top: 3vh;
     display: flex;
     font-size: 21px;
-    width: 100%;
     flex-direction: column;
+    width: 100%;
     align-items: center;
     position: relative;
 }
@@ -317,6 +316,11 @@ p {
     .menu-icon {
         margin-top: 2.5vh;
     }
-    
+    .satinne{
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 21px;
+    }
 
 }
