@@ -322,5 +322,7 @@ p {
     h2 {
         font-size: 21px;
     }
-
+    .p1 {
+        max-width: 70vw;
+    }
 }
