@@ -1,11 +1,9 @@
 import * as React from 'react';
+import { FaBirthdayCake } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
 
-// icons
 import {
     PersonOutline,
-    PetsOutlined,
-    LocationOn,
-    PunchClockOutlined,
     TransgenderOutlined,
 } from '@mui/icons-material';
 
@@ -15,42 +13,42 @@ import CssBaseline from '@mui/material/CssBaseline';
 import List from '@mui/material/List';
 import Paper from '@mui/material/Paper';
 
-    // custom components
-    import BottomNav from './Bottom';
-    import AgentListItem from './AgentListitem';
+// custom components
+import BottomNav from './Bottom';
+import AgentListItem from './AgentListitem';
 
-    // data
-    import { useAgentContext } from './AgentContext';;
+// data
+import { useAgentContext } from './AgentContext';;
 
 
-    export default function AgentList() {
-        const { Agents } = useAgentContext();
-        return (
-            <Box sx={{ pb: 7 }}>
-                <CssBaseline />
-                
-                <List>
-                    {
-                        Agents && Agents.map(
-                            ({id, attributes: {Nom, Prenom, Mail, Age, Sex}}, i)=>(
+export default function AgentList() {
+    const { Agents } = useAgentContext();
+    return (
+        <Box sx={{ pb: 7 }}>
+            <CssBaseline />
+
+            <List>
+                {
+                    Agents && Agents.map(
+                        ({ id, attributes: { Nom, Prenom, Mail, Age, Sex } }, i) => (
                             <AgentListItem
                                 key={i}
                                 id={id}
                                 agentType={Prenom}
                                 agentFieldData={[
-                                    {icon: <PersonOutline/>, attrib: Nom},
-                                    {icon: <PetsOutlined/>, attrib: Prenom},
-                                    {icon: <LocationOn/>, attrib: Mail},
-                                    {icon: <PunchClockOutlined/>, attrib: Age},
-                                    {icon: <TransgenderOutlined/>, attrib: Sex}
+                                    { icon: <PersonOutline />, attrib: Nom },
+                                    { attrib: Prenom },
+                                    { icon: <MdAlternateEmail />, attrib: Mail },
+                                    { icon: <FaBirthdayCake />, attrib: Age },
+                                    { icon: <TransgenderOutlined />, attrib: Sex }
                                 ]}
                             />
                         ))
-                    }
-                </List>
-                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-                    <BottomNav/>
-                </Paper>
-            </Box>
-        );
-    };
+                }
+            </List>
+            <Paper sx={{ bottom: 0, left: 0, right: 0 }} elevation={3}>
+                <BottomNav />
+            </Paper>
+        </Box>
+    );
+};
