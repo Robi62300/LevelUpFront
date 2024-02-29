@@ -5,17 +5,18 @@
     background: linear-gradient(279deg, rgba(227, 167, 255, 0.70) 0%, rgba(125, 255, 255, 0.80) 100%);
     color: black;
     justify-content: center;
+    text-align: center;
     align-items: flex-start;
 }
 
-.hover-entreprise:hover .h3-hover{
+.hover-entreprise:hover .h3-hover {
     margin-bottom: 15%;
     margin-top: 5%;
     font-size: 24px;
     text-decoration: underline;
 }
 
-.hover-entreprise:hover .li-hover{
+.hover-entreprise:hover .li-hover {
     display: flex;
     margin-top: 30px;
     font-size: 17px;
@@ -24,12 +25,18 @@
 
 }
 
-.hover-entreprise:hover p{
+.hover-entreprise:hover p {
     display: none;
 }
 
-.hover-entreprise:hover .icon-hover{
+.hover-entreprise:hover .icon-hover {
     color: #F1BB7C;
     margin-right: 5px;
     font-size: 1.8rem;
+}
+
+@media screen and (max-width:767px) {
+    svg {
+        width: 70px;
+    }
 }

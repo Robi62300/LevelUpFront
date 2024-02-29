@@ -7,7 +7,6 @@ export default function Footer() {
 
     return (
         <footer className="bas-de-page">
-            <div className="col">
                 <div className="tata">
                     <h3 className="titre-footer">
                         Entreprise
@@ -61,6 +60,8 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
+            
+            
                 <div className="tata">
                     <h3 className="titre-footer">
                         Réseaux sociaux
@@ -85,7 +86,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                </div>
+                    </div>
                 <div className="tata">
                     <h3 className="titre-footer">
                         Informations
@@ -98,7 +99,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="tata">
+                <div className="tata a">
                     <h3 className="titre-footer">
                         Notre société
                     </h3>
@@ -111,9 +112,8 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <img className="Qualiopi" src={Qualiopi} alt="logo"  >
-                </img>
-             </div>       
+                    <img className="Qualiopi" src={Qualiopi} alt="logo"  >
+                    </img>      
         </footer>
     )
 

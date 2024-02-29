@@ -1,0 +1,143 @@
+@media screen and (min-width:1024px) {
+    .bas-de-page {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #152f3E;
+        bottom: 0;
+        gap: 10vh;
+        padding: 40px 40px;
+    }
+
+
+    .tata {
+        width: 15vw;
+    }
+
+    .titre-footer {
+        font-size: 20px;
+        color: #FFF;
+        display: flex;
+        margin-bottom: 13px;
+    }
+
+    .li-footer {
+        font-size: 16px;
+        color: #A3A3A3;
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .li-social {
+        margin-top: 2px;
+        font-size: 16px;
+        color: #A3A3A3;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-footer {
+        height: 27px;
+        width: 27px;
+        color: #FFF;
+    }
+
+    .Qualiopi {
+        background-size: cover;
+    }
+
+    .one {
+        color: #A3A3A3;
+    }
+
+    .bas-de-page a {
+        color: #A3A3A3;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .bas-de-page {
+        display: grid;
+        background-color: #152f3E;
+        bottom: 0;
+        padding: 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col {
+        display: flex;
+        width: 100%;
+        padding-top: 15px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .col2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tata {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+        margin-top: 5vh;
+    }
+
+    .titre-footer {
+        font-size: 20px;
+        color: #FFF;
+        display: flex;
+        margin-bottom: 13px;
+    }
+
+    .li-footer {
+        color: #A3A3A3;
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .li-social {
+        margin-top: 2px;
+        font-size: 16px;
+        color: #A3A3A3;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-footer {
+        height: 27px;
+        width: 27px;
+        color: #FFF;
+    }
+
+    .Qualiopi {
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        margin-top: 5vh;
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .one {
+        color: #A3A3A3;
+    }
+
+    .bas-de-page a {
+        color: #A3A3A3;
+    }
+
+    .a {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+}

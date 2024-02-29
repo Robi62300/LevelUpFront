@@ -5,16 +5,17 @@
     color: black;
     justify-content: center;
     align-items: flex-start;
+    text-align: center;
 }
 
-.hover-particulier:hover .h3-hover{
+.hover-particulier:hover .h3-hover {
     margin-bottom: 15%;
     margin-top: 5%;
     font-size: 24px;
     text-decoration: underline;
 }
 
-.hover-particulier:hover .li-hover{
+.hover-particulier:hover .li-hover {
     display: flex;
     margin-top: 30px;
     font-size: 17px;
@@ -22,12 +23,13 @@
     align-items: center;
 }
 
-.hover-particulier:hover p{
+.hover-particulier:hover p {
     display: none;
 }
 
-.hover-particulier:hover .icon-hover{
+.hover-particulier:hover .icon-hover {
     color: #F1BB7C;
     margin-right: 5px;
     font-size: 1.8rem;
 }
+

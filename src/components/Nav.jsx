@@ -2,7 +2,7 @@ import React , {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import FlechesBas from '../img/fleche-bas.svg';
 import logo from '../img/levelup.png';
-import DropDownRejoindre from './dropdownrejoindre';
+import DropDownRejoindre from './MenuDrop/dropdownrejoindre';
 import DropDownParticulier from './dropparticulier';
 import DropDownEntreprise from './dropentreprise';
 
@@ -61,6 +61,7 @@ export default function Menu() {
                     {isDropDownVisibleEntreprise && <DropDownEntreprise />}
                     Je suis une entreprise
                 </NavLink>
+                
                 <img className="fleche" src={FlechesBas} width="20px" alt="Flechesbas"></img>
             </li>
             <li className="menuItem slideInDown-4" onMouseEnter={handleMouseEnterParticulier} onMouseLeave={handleMouseLeaveParticulier}>
